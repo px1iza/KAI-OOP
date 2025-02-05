@@ -2,7 +2,7 @@
 #include <cmath>
 
 #ifndef TRAPEZOID_H
-#define TRAPEZOID_H
+#define TRAPEZOID_H // директива
 
 class Trapezoid
 {
@@ -20,4 +20,4 @@ public:
     double getArea();
 };
 
-#endif // TRAPEZOID_H
+#endif
