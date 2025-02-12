@@ -1,5 +1,7 @@
-#ifndef TRIANGLE_H
-#define TRIANGLE_H
+// #ifndef TRIANGLE_H
+// #define TRIANGLE_H
+
+#pragma once
 
 class Triangle
 {
@@ -12,6 +14,12 @@ public:
     // Конструктори
     Triangle();
     Triangle(double x1, double y1, double x2, double y2, double x3, double y3);
+    Triangle(const Triangle &other);
+    // Делегування конструктора
+    Triangle(double x1, double y1);
+    // Triangle(Vector2D vec1, Vector2D vec2, Vector2D vec3);
+
+    ~Triangle();
 
     // Сетери
     void setCoordinates(double x1, double y1, double x2, double y2, double x3, double y3);
@@ -29,4 +37,8 @@ public:
     double getArea() const;
 };
 
-#endif // TRIANGLE_H
+// #endif // TRIANGLE_H
+
+
+// перевантаження класів в TS
+// що таке мережеве програмування
