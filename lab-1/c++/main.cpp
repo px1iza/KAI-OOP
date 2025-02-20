@@ -25,6 +25,5 @@ int main()
     // Обчислення та виведення площі
     double area = triangle.getArea();
     std::cout << "Площа: " << area << std::endl;
-
     return 0;
 }

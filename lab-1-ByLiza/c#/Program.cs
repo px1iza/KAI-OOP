@@ -10,7 +10,7 @@
             Console.Write("x1 = ");
             double x1 = Convert.ToDouble(Console.ReadLine() ?? "0");
             Console.Write("y1 = ");
-            double y1 = Convert.ToDouble(Console.ReadLine() ?? "0");
+            int y1 = TryParseToInt(Console.ReadLine() ?? "0");
             Console.Write("x2 = ");
             double x2 = Convert.ToDouble(Console.ReadLine() ?? "0");
             Console.Write("y2 = ");
