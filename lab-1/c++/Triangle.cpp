@@ -1,5 +1,6 @@
 #include "Triangle.h"
 #include <cmath> // для sqrt
+#include <iostream>
 
 // Конструктор за замовчуванням (задає координати 0,0,0,0,0,0)
 Triangle::Triangle()
@@ -11,6 +12,23 @@ Triangle::Triangle()
 Triangle::Triangle(double x1, double y1, double x2, double y2, double x3, double y3)
     : x1(x1), y1(y1), x2(x2), y2(y2), x3(x3), y3(y3)
 {
+}
+
+// Конструктор копії
+Triangle::Triangle(const Triangle &other)
+    : x1(other.x1), y1(other.y1), x2(other.x2), y2(other.y2), x3(other.x3), y3(other.y3)
+{
+}
+
+// Делегування конструктора
+Triangle::Triangle(double x1, double y1) : Triangle(x1, y1, 0, 0, 0, 0)
+{
+}
+
+// Деструктор
+Triangle::~Triangle()
+{
+    std::cout << "Destructor called" << std::endl;
 }
 
 // Сетери

@@ -22,16 +22,21 @@ int main()
     Trapezoid trapezoid(x1, y1, x2, y2, x3, y3, x4, y4);
 
     cout << "\nТрапеція має координати:\n";
-    cout << "  A(" << trapezoid.x1 << ", " << trapezoid.y1 << ")\n";
-    cout << "  B(" << trapezoid.x2 << ", " << trapezoid.y2 << ")\n";
-    cout << "  C(" << trapezoid.x3 << ", " << trapezoid.y3 << ")\n";
-    cout << "  D(" << trapezoid.x4 << ", " << trapezoid.y4 << ")\n";
-
+    cout << "  A(" << trapezoid.getX1() << ", " << trapezoid.getY1() << ")\n";
+    cout << "  B(" << trapezoid.getX2() << ", " << trapezoid.getY2() << ")\n";
+    cout << "  C(" << trapezoid.getX3() << ", " << trapezoid.getY3() << ")\n";
+    cout << "  D(" << trapezoid.getX4() << ", " << trapezoid.getY4() << ")\n";
     double perimeter = trapezoid.getPerimeter();
     cout << "\nПериметр: " << perimeter << endl;
 
     double area = trapezoid.getArea();
     cout << "Площа: " << area << endl;
 
-    return 0;
+        Trapezoid copyTrapezoid(trapezoid);
+    cout << "\nКопія трапеції створена.\n";
+    cout << "\nКопія трапеції має координати:\n";
+    cout << "  A(" << copyTrapezoid.getX1() << ", " << copyTrapezoid.getY1() << ")\n";
+    cout << "  B(" << copyTrapezoid.getX2() << ", " << copyTrapezoid.getY2() << ")\n";
+    cout << "  C(" << copyTrapezoid.getX3() << ", " << copyTrapezoid.getY3() << ")\n";
+    cout << "  D(" << copyTrapezoid.getX4() << ", " << copyTrapezoid.getY4() << ")\n";
 }
