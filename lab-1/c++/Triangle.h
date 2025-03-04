@@ -2,6 +2,7 @@
 // #define TRIANGLE_H
 
 #pragma once
+#include <iostream>
 
 class Triangle
 {
@@ -23,6 +24,7 @@ public:
 
     // Сетери
     void setCoordinates(double x1, double y1, double x2, double y2, double x3, double y3);
+    void setCoordinates(const double coords[6]);
 
     // Гетери
     double getX1() const;
@@ -35,6 +37,20 @@ public:
     // Методи обчислення
     double getPerimeter() const;
     double getArea() const;
+
+    // Метод масштабування з аргументом за умовчанням
+    void scale(double factor = 2.0);
+    Triangle scale(double factor, Triangle other);
+    void scale(Triangle &other, double factor = 2.0);
+
+    // Перевантаження оператора множення (масштабування)
+    Triangle operator*(double scalar) const;
+
+    // Перевантаження оператора додавання
+    Triangle operator+(const Triangle &other) const;
+
+    // Перевантаження оператора виведення
+    friend std::ostream &operator<<(std::ostream &os, const Triangle &triangle);
 };
 
 // #endif // TRIANGLE_H

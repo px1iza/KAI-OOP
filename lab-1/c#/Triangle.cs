@@ -65,6 +65,19 @@ namespace TriangleApp
             this.y3 = y3;
         }
 
+        // Перевантаження: Метод приймає масив з 6 елементів
+        public void SetCoordinates(double[] coords)
+        {
+            if (coords.Length != 6)
+                throw new ArgumentException("Масив повинен містити рівно 6 елементів.");
+            X1 = coords[0];
+            Y1 = coords[1];
+            X2 = coords[2];
+            Y2 = coords[3];
+            X3 = coords[4];
+            Y3 = coords[5];
+        }
+
         // Гетери (властивості) для читання координат
         // public double X1 => x1;
         // public double Y1 => y1;
@@ -92,6 +105,41 @@ namespace TriangleApp
 
             double p = (sideA + sideB + sideC) / 2.0; // півпериметр
             return Math.Sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+        }
+
+        // Метод масштабування з аргументом за умовчанням
+        public void Scale(double factor = 2.0)
+        {
+            X1 *= factor;
+            Y1 *= factor;
+            X2 *= factor;
+            Y2 *= factor;
+            X3 *= factor;
+            Y3 *= factor;
+        }
+
+                // Перевантаження оператора множення (масштабування трикутника)
+        public static Triangle operator *(Triangle t, double scalar)
+        {
+            return new Triangle(
+                t.X1 * scalar, t.Y1 * scalar,
+                t.X2 * scalar, t.Y2 * scalar,
+                t.X3 * scalar, t.Y3 * scalar);
+        }
+
+        // Перевантаження оператора додавання (сума трикутників)
+        public static Triangle operator +(Triangle a, Triangle b)
+        {
+            return new Triangle(
+                a.X1 + b.X1, a.Y1 + b.Y1,
+                a.X2 + b.X2, a.Y2 + b.Y2,
+                a.X3 + b.X3, a.Y3 + b.Y3);
+        }
+
+        // Перевизначення ToString для зручного виведення координат
+        public override string ToString()
+        {
+            return $"A({X1}, {Y1}), B({X2}, {Y2}), C({X3}, {Y3})";
         }
     }
 }
