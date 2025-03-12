@@ -1,0 +1,15 @@
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/bin/Debug/net9.0/Program
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/bin/Debug/net9.0/Program.deps.json
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/bin/Debug/net9.0/Program.runtimeconfig.json
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/bin/Debug/net9.0/Program.dll
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/bin/Debug/net9.0/Program.pdb
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.GeneratedMSBuildEditorConfig.editorconfig
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.AssemblyInfoInputs.cache
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.AssemblyInfo.cs
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.csproj.CoreCompileInputs.cache
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.sourcelink.json
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.dll
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/refint/Program.dll
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.pdb
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/Program.genruntimeconfig.cache
+/Users/henprokuror/VSCode/KAI-OOP/homework/c#/Program/obj/Debug/net9.0/ref/Program.dll
