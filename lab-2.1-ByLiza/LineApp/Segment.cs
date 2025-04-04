@@ -12,11 +12,11 @@ namespace LineApp
             : base(startX, startY, endX, endY)
         {
         }
+
         public Segment(Segment other)
             : base(other)
         {
         }
-
         public string GetSegmentData()
         {
             return $"Початкова точка: ({StartX}, {StartY}), Кінцева точка: ({EndX}, {EndY})";
@@ -25,13 +25,13 @@ namespace LineApp
         public void ReduceLengthBy5()
         {
             double length = GetLength();
+
             if (length == 5)
             {
                 Console.WriteLine("Помилка: довжина відрізка дорівнює 5, тому зменшити на 5 неможливо.");
                 return; 
             }
 
-            
             if (length <= 5)
             {
                 Console.WriteLine("Довжина відрізка занадто мала, щоб зменшити її на 5.");
@@ -47,6 +47,8 @@ namespace LineApp
                 SetEndCoordinates(newEndX, newEndY);
                 Console.WriteLine("Довжина відрізка зменшена на 5.");
             }
+
+            
         }
     }
 }

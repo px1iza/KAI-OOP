@@ -1,5 +1,4 @@
-#pragma once
-#include "Line.h" 
+#include "Line.h"
 #include <string>
 
 class Segment : public Line {
