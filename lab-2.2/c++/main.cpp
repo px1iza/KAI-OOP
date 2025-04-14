@@ -22,7 +22,6 @@ int main() {
     std::cout << ref1.identify() << std::endl; // Виклик методу Human
     std::cout << ref2.identify() << std::endl; // Виклик методу Ironman (поліморфізм)
 
-
     // Демонстрація поліморфізму через посилання
     Human humanPointless = human;  // Посилання на Human
     Human tonyPointless = tony;   // Посилання на Ironman

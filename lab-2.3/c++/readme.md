@@ -1,0 +1,1 @@
+g++ -std=c++11 main.cpp Ironman.cpp DoctorStrange.cpp Hulk.cpp Widow.cpp AvengersTeam.cpp -o main
