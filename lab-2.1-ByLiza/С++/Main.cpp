@@ -8,7 +8,6 @@ int main() {
 
     Segment segment1 = segment;
 
-    cout << "Дані відрізка:" << endl;
     cout << segment.GetSegmentData() << endl;
 
     double length = segment.GetLength();
