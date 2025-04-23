@@ -43,11 +43,6 @@ namespace CharacterLib
             members.RemoveAll(m => m.GetName() == name);
         }
 
-        public void RemoveBySuitModel(string suitModel)
-        {
-            members.RemoveAll(m => m is Ironman ironman && ironman.GetSuitModel() == suitModel);
-        }
-
         public void ClearTeam()
         {
             members.Clear();

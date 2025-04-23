@@ -31,17 +31,6 @@ void AvengersTeam::removeMember(const std::string& name) {
     );
 }
 
-void AvengersTeam::removeBySuitModel(const std::string& suitModel) {
-    members.erase(
-        std::remove_if(members.begin(), members.end(),
-            [&suitModel](const IDescribable* member) {
-                const Ironman* ironman = dynamic_cast<const Ironman*>(member);
-                return ironman && ironman->getSuitModel() == suitModel;
-            }),
-        members.end()
-    );
-}
-
 void AvengersTeam::clearTeam() {
     for (auto* member : members) {
         delete member;
