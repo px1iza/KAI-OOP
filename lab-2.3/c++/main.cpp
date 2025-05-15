@@ -33,13 +33,6 @@ int main() {
         std::cout << member->describe() << std::endl;
     }
 
-    // Видалення за моделлю броні
-    std::cout << "\nRemoving Mark L suits:\n";
-    team.removeBySuitModel("Mark L");
-    for (const auto* member : team.getMembers()) {
-        std::cout << member->describe() << std::endl;
-    }
-
     // Найпотужніший член
     std::cout << "\nMost powerful member:\n";
     if (const IDescribable* powerful = team.getMostPowerful()) {

@@ -16,7 +16,6 @@ public:
 
     void addMember(const IDescribable* member);
     void removeMember(const std::string& name);
-    void removeBySuitModel(const std::string& suitModel);
     void clearTeam();
     const IDescribable* getMostPowerful() const;
     void capitalizeNames();

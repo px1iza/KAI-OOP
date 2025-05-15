@@ -34,14 +34,6 @@ class Program
             Console.WriteLine(member.Describe());
         }
 
-        // Видалення за моделлю броні
-        Console.WriteLine("\nRemoving Mark L suits:");
-        team.RemoveBySuitModel("Mark L");
-        foreach (var member in team.GetMembers())
-        {
-            Console.WriteLine(member.Describe());
-        }
-
         // Найпотужніший член
         Console.WriteLine("\nMost powerful member:");
         if (team.GetMostPowerful() != null)
