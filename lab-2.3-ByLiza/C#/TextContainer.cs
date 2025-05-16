@@ -23,9 +23,9 @@ public class TextContainer
 
     public void CapitalizeAll()
     {
-        foreach (var line in lines)
+        for (int i = 0; i < lines.Count; i++)
         {
-            line.CapitalizeWords();
+            lines[i].CapitalizeWords();
         }
     }
 
@@ -38,14 +38,20 @@ public class TextContainer
 
     public int CountLinesOfLength(int length)
     {
-        return lines.Count(line => line.Length == length);
+        int count = 0;
+        for (int i = 0; i < lines.Count; i++)
+        {
+            if (lines[i].Content.Length == length)
+                count++;
+        }
+        return count;
     }
 
     public void PrintAll()
     {
-        foreach (var line in lines)
+        for (int i = 0; i < lines.Count; i++)
         {
-            System.Console.WriteLine(line);
+            System.Console.WriteLine(lines[i].Content);
         }
     }
 }

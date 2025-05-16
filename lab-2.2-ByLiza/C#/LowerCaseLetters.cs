@@ -7,11 +7,6 @@ namespace String
             _value = input.ToLower(); 
         }
 
-        public override int GetLength()
-        {
-            return _value.Length;
-        }
-
         public override string Shift()
         {
             if (_value.Length > 1)

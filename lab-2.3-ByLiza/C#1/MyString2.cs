@@ -1,16 +1,16 @@
 using System;
 using System.Globalization;
 
-public class MyString : IKeyGenerator
+public class MyString2 : IKeyGenerator
 {
     private string content;
 
     public string Content
     {
-        get { return content; }
+        get { return content + " 2"; }
     }
 
-    public MyString(string input)
+    public MyString2(string input)
     {
         content = input;
     }
@@ -19,9 +19,10 @@ public class MyString : IKeyGenerator
     {
         string[] words = content.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
         string key = "";
+
         for (int i = 0; i < words.Length; i++)
         {
-            key += words[i][0];
+            key += words[words.Length-i-1][0];
         }
 
         return key;
@@ -34,7 +35,7 @@ public class MyString : IKeyGenerator
         {
             if (words[i].Length > 0)
             {
-                words[i] = char.ToUpper(words[i][0]) + words[i].Substring(1);
+                words[i] = char.ToLower(words[i][0]) + words[i].Substring(1);
             }
         }
         content = string.Join(" ", words);

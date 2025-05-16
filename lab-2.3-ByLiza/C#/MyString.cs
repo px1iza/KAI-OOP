@@ -5,10 +5,10 @@ public class MyString : IKeyGenerator
 {
     private string content;
 
-   public string Content
-{
-    get { return content; }
-}
+    public string Content
+    {
+        get { return content; }
+    }
 
     public MyString(string input)
     {
@@ -19,20 +19,20 @@ public class MyString : IKeyGenerator
     {
         TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
         content = textInfo.ToTitleCase(content.ToLower());
+
     }
 
     public string GenerateKey()
     {
-        var words = content.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] words = content.Split(new string[] { " " }, StringSplitOptions.RemoveEmptyEntries);
         string key = "";
-        foreach (var word in words)
+
+        for (int i = 0; i < words.Length; i++)
         {
-            key += word[0];
+            key += words[i][0];
         }
+
         return key;
     }
 
-    public int Length => content.Length;
-
-    public override string ToString() => content;
 }

@@ -6,9 +6,8 @@ class Program
     {
         TextContainer text = new();
 
-        text.AddLine("привіт світ");
-        text.AddLine("відкрити штучний інтелект");
-        text.AddLine("об'єктно орієнтоване програмування");
+        text.AddLine(new MyString("привіт світ"));
+        text.AddLine(new MyString2("Об'єКтно орієнтоване програмування"));
 
         Console.WriteLine("Початковий текст:");
         text.PrintAll();
